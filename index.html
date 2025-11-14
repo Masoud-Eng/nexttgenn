@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGenEcs</title>
+  <link rel="icon" href="images/iul_logo.webp" type="image/webp">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6fb;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, #003366, #004b99);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 70px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 10px;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 1.8rem;
+    }
+    header p {
+      font-size: 1rem;
+      color: #d0e0ff;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0055a5;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      padding: 14px 18px;
+      text-decoration: none;
+      font-size: 1rem;
+      display: block;
+    }
+    nav a:hover {
+      background: #003f7f;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .search-box input {
+      width: 80%;
+      max-width: 420px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      outline: none;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      color: #003366;
+      border-left: 5px solid #0055a5;
+      padding-left: 10px;
+    }
+
+    /* GRID LAYOUT */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    /* BUTTONS */
+    .download-btn {
+      display: inline-block;
+      margin: 6px 0;
+      padding: 10px 15px;
+      background: #0055a5;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      background: #003f7f;
+    }
+
+    /* SLIDESHOW */
+    .slideshow {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      nav a { font-size: 0.9rem; padding: 10px 12px; }
+      section { padding: 15px; }
+      .download-btn { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+   <img src="https://iulonline.in/images/iul_logo.png" alt="Integral University Logo">
+  <h1>Electrical & Computer Science</h1>
+  <p>Welcome to the Department of Electrical & Computer Science</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#notifications">Notifications</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#courses">Courses</a>
+    <a href="#events">Events</a>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#students">Students</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- SEARCH BOX -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search faculty, course, or notice...">
+  </div>
+
+  <!-- SLIDESHOW -->
+  <section id="events">
+    <h2>🎞 Events Gallery</h2>
+    <div class="slideshow">
+      <img class="slides" src="https://via.placeholder.com/800x400?text=AI+Workshop" alt="AI Workshop">
+      <img class="slides" src="https://via.placeholder.com/800x400?text=Robotics+Seminar" alt="Robotics Seminar">
+      <img class="slides" src="https://via.placeholder.com/800x400?text=Industrial+Visit" alt="Industrial Visit">
+    </div>
+  </section>
+
+  <!-- NOTIFICATIONS -->
+  <section id="notifications">
+    <h2>🔔 Notifications</h2>
+    <div class="grid">
+      <div class="card search-item"><b>For Electrical Engineering</b> – <a href="https://www.iul.ac.in/EE/">Click Me</a></div>
+      <div class="card search-item"><b>For Computer Science Engineering</b> – <a href="https://www.iul.ac.in/CS/">Click Me</a></div>
+    </div>
+  </section>
+
+  <!-- FACULTY -->
+  <section id="faculty">
+    <h2>👩‍🏫 Faculty Members</h2>
+    <div class="grid">
+      <div class="card search-item"><b>Dr. Mohammad Atif Siddiqui</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_Dr.%20M%20A%20Siddiqui_EED.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Asif Jamil Ansari</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_For_Deptt_Website_AJAnsari.pdf">Profile</a></div>
+      <div class="card search-item"><b>Mohammed Arifuddin Mallick</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_M%20A%20Mallick_EE%20Website.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Mohd Khursheed</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_For_Deptt_Website_MKS.pdf">Profile</a></div>
+      <div class="card search-item"><b>Mr. Qamar Alam</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_QAMAR%20ALAM_Website.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Akhlaque Ahmad Khan</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV%20for%20Departmental%20Website%20(Dr.%20Akhlaque%20A.%20Khan).pdf">Profile</a></div>
+      <div class="card search-item"><b>Mrs. Ambrin Siddiqui</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_For_Deptt_Website_Template_Ambreen%20(1).pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Monauwer Alam</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Computer%20Science%20&%20Engineering/_Computer%20Science%20&%20Engineering-CV_For%20Website_Malam_oct%202024.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Mirza Mohammad Shadab</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-Shadab_CV_For_Deptt_Website_.pdf">Profile</a></div>
+      <div class="card search-item"><b>Mr. Prabhat Ranjan Sarkar</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV%20PRS.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Mohammed Asim</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-CV_For_Deptt_Website_Template_Asim.pdf">Profile</a></div>
+      <div class="card search-item"><b>Dr. Isarar Ahamad</b> – <a href="https://www.iul.ac.in/DWC/Faculty/fileupload/Electrical%20Engineering/_Electrical%20Engineering-IA%20CV%20new.pdf">Profile</a></div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <h2>📚 Courses Offered</h2>
+    <div class="grid">
+      <div class="card search-item">B.Tech in Electrical Engineering</div>
+      <div class="card search-item">B.Tech in Computer Science & Engineering</div>
+      <div class="card search-item">M.Tech in Electrical Engineering</div>
+      <div class="card search-item">M.Tech in Computer Science & Engineering</div>
+    </div>
+  </section>
+
+  <!-- SYLLABUS -->
+  <section id="syllabus">
+    <h2>📂 Download Syllabus</h2>
+    <div class="card">
+      <a href="https://www.iul.ac.in/EE/Student.aspx" class="download-btn" download>Electrical Engineering Syllabus</a><br>
+      <a href="https://www.iul.ac.in/CS/Student.aspx" class="download-btn" download>Computer Science Syllabus</a>
+    </div>
+  </section>
+
+  <!-- STUDENTS -->
+  <section id="students">
+    <h2>🎓 Student Corner</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Timetables</h3>
+        <a href="https://www.iul.ac.in/EE/Student.aspx" class="download-btn" download>B.Tech Electrical Timetable</a><br>
+        <a href="https://www.iul.ac.in/CS/Student.aspx" class="download-btn" download>B.Tech CSE Timetable</a>
+      </div>
+      <div class="card">
+        <h3>Results</h3>
+        <a href="https://results.iul.ac.in/" class="download-btn" download>B.Tech Results</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>🏫 About Department</h2>
+    <div class="card">
+      The Electrical & Computer Science Department aims to provide quality education and research opportunities in emerging technologies such as Artificial Intelligence, Power Electronics, and Smart Grids.
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>📞 Contact</h2>
+    <div class="card">
+      <b>Email:</b> nextgenecs@gmail.com <br>
+      <b>Address:</b> Integral University, Lucknow, India
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Electrical & Computer Science Department. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Slideshow
+    let index = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      index++;
+      if (index > slides.length) { index = 1; }
+      slides[index-1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+
+    // Search function
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+      let filter = this.value.toLowerCase();
+      let items = document.getElementsByClassName("search-item");
+      for (let i = 0; i < items.length; i++) {
+        let text = items[i].innerText.toLowerCase();
+        items[i].style.display = text.includes(filter) ? "" : "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
